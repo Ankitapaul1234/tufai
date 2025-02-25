@@ -1,6 +1,7 @@
 "use server";
 
-import { auth } from "@clerk/nextjs/dist/types/server";
+// import { auth } from "@clerk/nextjs/dist/types/server";
+import { auth } from "@clerk/nextjs/server";
 import { db } from "@/lib/prisma";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
@@ -128,4 +129,36 @@ export async function saveQuizResult(questions, answers, score) {
         throw new Error("Failed to save quiz result");
     }
     
+}
+
+export async function getAssessments() {
+  const { userId } = await auth();
+    if (!userId) throw new Error("Unauthorized");
+  
+    const user = await db.user.findUnique({
+      where: { clerkUserId: userId },
+      select: {
+        industry: true,
+        skills: true,
+      },
+    });
+  
+    if (!user) throw new Error("User not found");
+
+    try {
+      const assessments = await db.assessment.findMany({
+        where: {
+          userId: user.id,
+        },
+        orderBy: {
+          createdAt: "asc",
+        },
+      });
+  
+      return assessments;
+    } catch (error) {
+      console.error("Error fetching assessments:", error);
+      throw new Error("Failed to fetch assessments");
+    }
+  
 }
