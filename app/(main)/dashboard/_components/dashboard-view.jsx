@@ -4,8 +4,9 @@ import React from 'react';
 import { format,formatDistanceToNow } from 'date-fns';
 import { Badge } from '@/components/ui/badge';
 import { TrendingUp } from 'lucide-react';
-
-import { Briefcase,BriefcaseIcon,Brain } from 'lucide-react';
+import { TrendingDown } from 'lucide-react';
+import { LineChart } from 'lucide-react';
+import { BriefcaseIcon,Brain } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 // import { ResponsiveContainer } from 'recharts';
 // import { BarChart } from 'lucide-react';
