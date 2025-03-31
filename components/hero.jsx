@@ -39,13 +39,14 @@ const HeroSection = () => {
             Advance your career with personalized guidance, interview prep, and
             AI-powered tools for job success.
           </p>
+          <p>For start your journey please Sign in first</p>
         </div>
         <div className="flex justify-center space-x-4">
-          <Link href="/dashboard">
-            <Button size="lg" className="px-8">
+          
+            {/* <Button size="lg" className="px-8">
               Get Started
-            </Button>
-          </Link>
+            </Button> */}
+          
           <Link href="https://github.com/Ankitapaul1234/tufai">
             <Button size="lg" variant="outline" className="px-8">
               Watch Demo

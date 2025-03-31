@@ -14,10 +14,10 @@ export const features = [
       "Practice with role-specific questions and get instant feedback to improve your performance.",
   },
   {
-    icon: <LineChart className="w-10 h-10 mb-4 text-primary" />,
-    title: "Industry Insights",
+    icon: <ScrollText className="w-10 h-10 mb-4 text-primary" />,
+    title: "Cover Letter Generator",
     description:
-      "Stay ahead with real-time industry trends, salary data, and market analysis.",
+      "Generate your Cover letter fast,you can save and delete it.",
   },
   {
     icon: <ScrollText className="w-10 h-10 mb-4 text-primary" />,
