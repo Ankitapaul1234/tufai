@@ -93,12 +93,12 @@ const Header = async() => {
               </DropdownMenuItem>
 
 {/* add new profile menu */}
-               {/* <DropdownMenuItem>
+               <DropdownMenuItem>
     <Link href="/onboarding" className="flex items-center gap-2">
       <LayoutDashboard className="h-4 w-4" />
       <span>Complete Profile</span>
     </Link>
-  </DropdownMenuItem> */}
+  </DropdownMenuItem>
 
             </DropdownMenuContent>
           </DropdownMenu>
